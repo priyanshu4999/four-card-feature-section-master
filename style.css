@@ -13,7 +13,7 @@
 --color-Blue: hsl(212, 86%, 64%);
 --color-Grey-500: hsl(234, 12%, 34%);
 --color-Grey-400: hsl(212, 6%, 44%);
---color-White: hsl(0, 0%, 97%);
+--color-White: hsl(0, 0%, 100%);
 --color-shadow-black : hsla(0, 0%, 0%, 0.25);
 --color-shadow-blue : rgba(131 , 166 ,210 , 0.5);
 
@@ -152,7 +152,8 @@ body{
     display: flex;
     flex-direction: var(--card-grid-flex-direction);
     align-items: center;
-    gap : var(--card-grid-flex-gap)
+    gap : var(--card-grid-flex-gap);
+    margin-block: var(--spacing-500);
     
 }
 
