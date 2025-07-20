@@ -84,6 +84,7 @@ body{
     flex-direction: column-reverse;
     align-items: center;
     justify-content: center;
+    margin-block: var(--spacing-500);
 }
 .text-semibold-xl{
     font-family: 'Poppins' , sans-serif;
