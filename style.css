@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;700&display=swap');
+
+:root{
+
+--card-border : 0.25em;
+--card-border-radius : 0.5em;
+--card-width : 314px;
+--card-height : 250px;
+
+--color-Red: hsl(0, 78%, 62%);
+--color-Cyan: hsl(180, 62%, 55%);
+--color-Orange: hsl(34, 97%, 64%);
+--color-Blue: hsl(212, 86%, 64%);
+--color-Grey-500: hsl(234, 12%, 34%);
+--color-Grey-400: hsl(212, 6%, 44%);
+--color-White: hsl(0, 0%, 100%);
+--color-shadow-black : hsla(0, 0%, 0%, 0.25);
+--color-shadow-blue : rgba(131 , 166 ,210 , 0.5);
+
+--font-family : 'Poppins',sans-serif ; 
+--font-semibold : 600;
+--font-regular : 400;
+--font-extralight : 200;
+
+--font-size-xs :  0.8125rem;
+--font-size-s : 0.9375rem;
+--font-size-m : 1.25rem;
+--font-size-xl : clamp(1.5rem, 4.2vw  , 2.25rem);
+
+--font-line-height-s : 135%;
+--font-line-height-m : 140%;
+--font-line-height-l : 160%;
+
+
+--spacing-500: 2.5em; 
+--spacing-400: 2em; 
+--spacing-300: 1.5em; 
+--spacing-200: 1em; 
+--spacing-100: 0.5em; 
+
+/* -----*/
+--background-color : var(--color-White);
+--box-shadow : 
+    0 0.25em 0.25em 0em var(--color-shadow-black),
+    0 1em 2em -0.75em var(--color-shadow-blue);
+
+
+ --card-grid-flex-direction : column;
+ --card-central-flex-direction : column;
+ --card-grid-flex-gap : var(--spacing-400);
+ --card-central-flex-gap : var(--spacing-400);
+
+
+}
+
+@media (min-width : 768px ){
+    :root{
+        --card-grid-flex-direction : column;
+        --card-central-flex-direction : row;
+        --margin : var(--spacing-400)
+    }
+}
+
+@media(min-width : 1440px){
+    :root{
+       --card-grid-flex-direction : row;
+        --card-central-flex-direction : column;  
+        --card-width : 350px;
+        --margin : 0.25em;
+    }
+}
+
+*{
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin: 0px;
+}
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+}
+.text-semibold-xl{
+    font-family: 'Poppins' , sans-serif;
+    font-weight: var(--font-semibold);
+    font-size: var(--font-size-xl);
+    line-height: var(--font-line-height-m);
+}
+.text-extralight-xl{
+    font-family: 'Poppins' , sans-serif;
+    font-weight: var(--font-extralight);
+    font-size: var(--font-size-xl);  
+    line-height: var(--font-line-height-m);  
+}
+.text-semibold-m{
+    font-family: 'Poppins' , sans-serif;
+    font-weight: var(--font-semibold);
+    font-size: var(--font-size-m);  
+    line-height: var(--font-line-height-s);  
+}
+.text-regular-s{
+    font-family: 'Poppins' , sans-serif;
+    font-weight: var(--font-regular);
+    font-size: var(--font-size-s);  
+    line-height: var(--font-line-height-m);
+     
+}
+.text-regular-xs{
+    font-family: 'Poppins' , sans-serif;
+    font-weight: var(--font-regular);
+    font-size: var(--font-size-xs);  
+    line-height: var(--font-line-height-l); 
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-block: var(--spacing-500);
+    
+    
+}
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.hero__intro{
+    max-width: 55ch;
+    text-align: center;
+    margin: var(--spacing-300);
+}
+.card-grid{
+    
+    min-width: fit-content;
+    display: flex;
+    flex-direction: var(--card-grid-flex-direction);
+    align-items: center;
+    gap : var(--card-grid-flex-gap)
+    
+}
+
+.card{
+    border-radius: var(--card-border-radius);
+    height: var(--card-height);
+    width: var(--card-width);
+    box-shadow: var(--box-shadow);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: var(--spacing-400);
+    overflow: hidden;
+    
+}
+.card figure{
+    align-self: end;
+    margin-top: 10%;
+    
+}
+
+.card-grid__central{
+    display: flex;
+    flex-direction: var(--card-central-flex-direction);
+    justify-content: center;
+    align-items: center;
+    gap: var(--card-central-flex-gap);
+    
+    
+    
+}
+
+.card--red{
+    border-top: var(--card-border) solid var(--color-Red); 
+}    
+
+.card--blue{
+    border-top : var(--card-border) solid var(--color-Blue);
+}
+
+.card--cyan{
+    border-top : var(--card-border) solid var(--color-Cyan);
+    
+}
+
+.card--orange{
+    border-top: var(--card-border) solid var(--color-Orange);
+    
+}
+
+
