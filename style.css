@@ -13,7 +13,7 @@
 --color-Blue: hsl(212, 86%, 64%);
 --color-Grey-500: hsl(234, 12%, 34%);
 --color-Grey-400: hsl(212, 6%, 44%);
---color-White: hsl(0, 0%, 100%);
+--color-White: hsl(0, 0%, 97%);
 --color-shadow-black : hsla(0, 0%, 0%, 0.25);
 --color-shadow-blue : rgba(131 , 166 ,210 , 0.5);
 
@@ -53,20 +53,20 @@
 
 }
 
-@media (min-width : 768px ){
+@media (min-width : 48rem){
     :root{
         --card-grid-flex-direction : column;
         --card-central-flex-direction : row;
-        --margin : var(--spacing-400)
+        
     }
 }
 
-@media(min-width : 1440px){
+@media(min-width : 90rem){
     :root{
        --card-grid-flex-direction : row;
         --card-central-flex-direction : column;  
         --card-width : 350px;
-        --margin : 0.25em;
+       
     }
 }
 
@@ -74,7 +74,8 @@
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin: 0px;
+    margin: 0em;
+    padding: 0em;
 }
 
 body{
@@ -89,24 +90,28 @@ body{
     font-weight: var(--font-semibold);
     font-size: var(--font-size-xl);
     line-height: var(--font-line-height-m);
+    color: var(--color-Grey-400);
 }
 .text-extralight-xl{
     font-family: 'Poppins' , sans-serif;
     font-weight: var(--font-extralight);
     font-size: var(--font-size-xl);  
-    line-height: var(--font-line-height-m);  
+    line-height: var(--font-line-height-m); 
+    color: var(--color-Grey-500); 
 }
 .text-semibold-m{
     font-family: 'Poppins' , sans-serif;
     font-weight: var(--font-semibold);
     font-size: var(--font-size-m);  
     line-height: var(--font-line-height-s);  
+     color: var(--color-Grey-500); 
 }
 .text-regular-s{
     font-family: 'Poppins' , sans-serif;
     font-weight: var(--font-regular);
     font-size: var(--font-size-s);  
     line-height: var(--font-line-height-m);
+    color: var(--color-Grey-400); 
      
 }
 .text-regular-xs{
@@ -114,6 +119,7 @@ body{
     font-weight: var(--font-regular);
     font-size: var(--font-size-xs);  
     line-height: var(--font-line-height-l); 
+    color: var(--color-Grey-400); 
 }
 
 
@@ -123,6 +129,7 @@ body{
     justify-content: space-around;
     align-items: center;
     margin-block: var(--spacing-500);
+    padding-block: var(--spacing-500);
     
     
 }
